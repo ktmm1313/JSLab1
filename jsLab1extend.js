@@ -1,18 +1,21 @@
-let wage = 12;
+let wage = 10;
 let hours = 60;
 
 let weeks = 0;
-while (paycheck < 1000000) {
+let sum = 0;
+while (sum < 1000000) {
 
-if (hours >= 40) {
-    week++;
+    if (hours >= 40) {
+    weeks++;
     paycheck = (hours - 40) * (wage * 1.5) + (wage * 40);
-    console.log(paycheck);
-
+    //console.log(weeks);
+    sum = sum + paycheck;
 } else {
-    week++;
+    weeks++;    
     paycheck = wage * hours;
-    console.log(paycheck);
+    //console.log(weeks);
+    sum = sum + paycheck;
+    break;
 }
-
+console.log(weeks);
 }
